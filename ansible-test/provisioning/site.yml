@@ -1,9 +1,0 @@
----
-- hosts: vagrants
-  sudo: yes
-  tasks:
-    - name: install packages wget
-      yum: name=wget state=present
-
-    - name: install the 'Development tools' package group
-      yum: name="@Development tools" state=present
