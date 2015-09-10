@@ -1,0 +1,8 @@
+echo 'Shutting down all servers. 
+
+
+
+
+
+
+Finished: SUCCESS'
