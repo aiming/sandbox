@@ -1,0 +1,61 @@
+#!/bin/sh
+
+# 1. 実行すると最初に以下が表示される
+echo 'Hello, Bash World'
+echo 'This is shell script.'
+echo -e 'TEST START.\n'
+
+# 2. /tmp/foo というfile or dir(directory) の存在をcheckする
+# 3. もしも/tmp/foo の存在がない場合は 4 へ。 そうではない場合は 5 に飛ぶ
+if [ -e /tmp/foo ]
+  then
+    :
+# 4. /tmp/ に foo というファイルが作られる
+  else
+    echo '/tmpに foo ファイルを作成します'
+    touch /tmp/foo
+fi
+
+# 5. foo ファイルの中に foo bar という文字列が入る
+echo '/tmp/foo に foo bar を書き込みます'
+echo foo bar > /tmp/foo
+
+# 6. HomeDir に TEST というDir を作成する
+echo '/home/kawada に TEST ディレクトリを作成します'
+mkdir /home/kawada/TEST
+
+# 7. /tmp/foo から HomeDirのTEST dir(上記で作成されたディレクトリ) にhogeという名前でファイルがコピーされる
+echo '/tmp/foo を /home/kawada/TEST/hoge にコピーします'
+cp /tmp/foo /home/kawada/TEST/hoge
+
+# 8. hoge ファイルの存在をcheckする
+# 9. もしも hoge ファイルがある場合は、 "hogeの作成が成功しました" と表示させる
+#    ファイルがない場合は、 "Error: hogeファイルがありません"と表示させて終了させる。その際の終了ステータスコードは1とする
+if [ -f /home/kawada/TEST/hoge ]
+  then
+    echo 'hogeの作成が成功しました'
+  else
+    echo 'Error: hogeファイルがありません'
+   return 1
+fi
+
+# 10. hoge の中に記載されている bar という文字列を aiming に置換する
+echo '/home/kawada/TEST/hoge の bar 文字列を aiming に置換します'
+sed -i -e 's/bar/aiming/g' /home/kawada/TEST/hoge
+
+# 11. hogeの中に記載されている文字列を表示させる
+echo '/home/kawada/TEST/hoge の中身を表示します'
+cat /home/kawada/TEST/hoge
+
+# 12. Loop処理を使い、hoge ファイルを hoge1, hoge2, hoge3, ... とsequence no.をつけた名前で 10個増やす
+echo '/home/kawada/TEST の hoge ファイルを10個増やします'
+((i = 1))
+while [ $i -le 10 ]
+do
+  cp /home/kawada/TEST/hoge /home/kawada/TEST/hoge$i
+  ((i++))
+done
+
+# 13. 増やしたhoge ファイル一覧を表示させる
+echo '/home/kawada/TEST の hogeファイル一覧を表示します'
+ls /home/kawada/TEST | grep hoge
