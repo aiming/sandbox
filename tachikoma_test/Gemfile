@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -7,84 +6,4 @@ git_source(:github) do |repo_name|
 end
 
 ruby '2.4.0'
-
-gem 'rails', '~> 5.0.1'
-
-gem 'acts_as_list'
-gem 'activerecord-import'
-gem 'bigquery'
-gem 'bullet'
-gem 'coffee-rails'
-gem 'data_uri'
-gem 'devise'
-gem 'draper', '>= 3.0.0.pre'
-gem 'enumerize', '>= 2.1.1'
-gem 'faraday'
-gem 'font-awesome-rails'
-gem 'gon'
-gem 'google_calendar'
-gem 'gretel'
-gem 'hamlit-rails'
-gem 'highcharts-rails'
-gem 'jbuilder'
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-gem 'less-rails'
-gem 'letter_opener'
-gem 'momentjs-rails'
-gem 'mysql2', '= 0.3.20'
-gem 'newrelic_rpm'
-gem 'omniauth'
-gem 'omniauth-google-oauth2'
-gem 'pundit'
-gem 'puma'
-gem 'redcarpet'
-gem 'sass-rails'
-gem "sentry-raven"
-gem 'settingslogic'
-gem 'slack-notifier'
-gem 'spinjs-rails'
-gem 'therubyracer', platforms: :ruby
-gem 'thor'
-gem 'turbolinks'
-gem 'twitter-bootstrap-rails', '~>3.2'
-gem 'uglifier'
-gem 'whenever', require: false
-
-group :development do
-  gem 'brakeman', require: false
-  gem 'metric_fu', require: false
-  gem 'rubocop', require: false
-  gem 'web-console'
-
-  # capistrano
-  gem 'capistrano'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano3-puma'
-end
-
-group :development, :test do
-  gem 'byebug', platform: :mri
-  gem 'factory_girl_rails'
-  gem 'guard'
-  gem 'guard-livereload'
-  gem 'guard-rspec'
-  gem 'listen'
-  gem 'pry-byebug'
-  gem 'pry-rails'
-  gem 'rspec-rails'
-  gem 'spring'
-  gem 'tapp'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'poltergeist'
-  gem 'simplecov', require: false
-  gem 'timecop'
-end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'awesome_print', '=1.6.0'
