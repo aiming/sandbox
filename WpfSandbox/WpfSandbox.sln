@@ -9,18 +9,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSandbox", "WpfSandbox\Wp
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Debug|Any CPU.ActiveCfg = Debug
-		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Debug|Any CPU.Build.0 = Debug
-		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Release|Any CPU.ActiveCfg = Release
-		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Release|Any CPU.Build.0 = Release
-		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Debug|x64.ActiveCfg = Debug
+		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Debug|x64.Build.0 = Debug
+		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Release|x64.ActiveCfg = Release
+		{8FC723B1-F0A7-4B55-A265-90E7210C8ABF}.Release|x64.Build.0 = Release
+		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Debug|x64.ActiveCfg = Debug|x64
+		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Debug|x64.Build.0 = Debug|x64
+		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Release|x64.ActiveCfg = Release|x64
+		{E6B20DC0-ED5F-4CC9-BE62-EF40F8BF94D7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
