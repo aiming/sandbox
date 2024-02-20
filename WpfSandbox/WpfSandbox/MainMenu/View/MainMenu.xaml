@@ -1,0 +1,40 @@
+﻿<Page x:Class="ExampleLauncher.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ExampleLauncher"
+      xmlns:vm="clr-namespace:ExampleLauncher"
+      mc:Ignorable="d"
+      Title="MainMenu" Height="450" Width="800">
+
+    <Page.DataContext>
+        <vm:DownloaderViewModel />
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Frame x:Name="JobFrame" Grid.Row="0" NavigationUIVisibility="Hidden" Background="Lavender"/>
+
+        <StackPanel Grid.Row="1">
+            <Button
+                Width="640" Height="50"
+                Content="{Binding ElapsedTime, UpdateSourceTrigger=PropertyChanged}"
+                Click="Button_Click"
+                Margin="0, 0, 0, 20" />
+            <!-- Command="{Binding StartDownloadCommand}" -->
+            <Button
+                Width="640"
+                Height="50"
+                Content="{Binding Progression, UpdateSourceTrigger=PropertyChanged}"
+                Command="{Binding StartDownloadCommand}"
+                Click="Button_Click2"
+                Margin="0, 0, 0, 20" />
+            <Button Width="640" Height="50" Click="Exit">終了</Button>
+        </StackPanel>
+    </Grid>
+</Page>
