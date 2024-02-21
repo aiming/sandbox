@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using WpfApp.Libs;
 
 namespace ExampleLauncher;
 
@@ -9,4 +10,9 @@ namespace ExampleLauncher;
 /// </summary>
 public partial class App : Application
 {
+    private ApplicationProcess process = new();
+
+    public App()
+    {
+    }
 }
