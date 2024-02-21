@@ -1,4 +1,6 @@
-﻿namespace ExampleLauncher;
+﻿using WpfApp.Libs;
+
+namespace ExampleLauncher;
 
 public class ApplicationContext
 {
@@ -7,6 +9,7 @@ public class ApplicationContext
 
     public JobRunner JobRunner { get; } = new();
     public DownloaderViewModel DownloaderViewModel { get; } = new();
+    public ApplicationProcess Process { get; } = new();
 
     private ApplicationContext()
     {

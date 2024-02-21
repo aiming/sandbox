@@ -70,6 +70,8 @@ public class DownloaderViewModel : INotifyPropertyChanged
         set => SetField(ref _elapsedTime, value);
     }
 
+    public string IsAdministrator =>
+        $"Is Administrator : {ApplicationContext.Instance.Process.IsAdministrator()}";
 
     private Uri _uri;
     public Uri Uri

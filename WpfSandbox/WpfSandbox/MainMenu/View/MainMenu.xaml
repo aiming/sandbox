@@ -24,14 +24,13 @@
             <Button
                 Width="640" Height="50"
                 Content="{Binding ElapsedTime, UpdateSourceTrigger=PropertyChanged}"
+                Command="{Binding StartDownloadCommand}"
                 Click="Button_Click"
                 Margin="0, 0, 0, 20" />
-            <!-- Command="{Binding StartDownloadCommand}" -->
             <Button
                 Width="640"
                 Height="50"
-                Content="{Binding Progression, UpdateSourceTrigger=PropertyChanged}"
-                Command="{Binding StartDownloadCommand}"
+                Content="{Binding IsAdministrator}"
                 Click="Button_Click2"
                 Margin="0, 0, 0, 20" />
             <Button Width="640" Height="50" Click="Exit">終了</Button>

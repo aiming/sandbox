@@ -23,7 +23,10 @@ public partial class MainMenu : Page
 
     private void Button_Click2(object sender, RoutedEventArgs e)
     {
-        JobFrame.Navigate(null);
+        if (ApplicationContext.Instance.Process.IsAdministrator())
+            ApplicationContext.Instance.Process.RebootAsUser();
+        else
+            ApplicationContext.Instance.Process.RebootAsAdministrator();
     }
 
     private void Exit(object sender, RoutedEventArgs e)
